@@ -1,0 +1,107 @@
+{
+  "note_id": "note_002_amazon_103222",
+  "description": "Follow-up with ankle swelling, neuropathy, and diabetes on oral medication",
+  "expected_extractions": [
+    {
+      "level": "sentence_level",
+      "condition": "Diabetic neuropathy",
+      "icd10_code": "E11.40",
+      "icd10_display": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+      "rationale": "Direct mention of diabetic peripheral neuropathy in past medical history and assessment",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "Peripheral neuropathy - managed with Neurontin",
+        "Diabetic peripheral neuropathy with foot involvement"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Diabetic polyneuropathy",
+      "icd10_code": "E11.42",
+      "icd10_display": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+      "rationale": "Neuropathy affects multiple areas (toes 1-5, bilateral ankle reflexes diminished), suggesting polyneuropathy rather than unspecified",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["HPI", "ROS", "Physical_Exam", "Assessment_Plan"],
+      "key_phrases": [
+        "numbness in left foot, particularly in toes",
+        "Decreased sensation to light touch and pinprick in left foot, affecting toes 1-5",
+        "Deep tendon reflexes diminished at ankle bilaterally",
+        "Progressive neuropathy of left foot"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Unspecified lesion of left lower limb nerve",
+      "icd10_code": "G57.92",
+      "icd10_display": "Unspecified lesion of left lower limb nerve",
+      "rationale": "Specific laterality (left foot) and nerve involvement can be coded separately from diabetic neuropathy",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["HPI", "Physical_Exam"],
+      "key_phrases": [
+        "numbness in left foot",
+        "Decreased sensation to light touch and pinprick in left foot"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Type 2 diabetes mellitus",
+      "icd10_code": "E11.9",
+      "icd10_display": "Type 2 diabetes mellitus without complications",
+      "rationale": "Patient on Glucophage (metformin), which is typical for Type 2. If coding polyneuropathy separately, base diabetes code would be E11.9",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "Diabetes mellitus - Type 2, managed with Glucophage (metformin)",
+        "Diabetes mellitus, Type 2"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Long term use of oral hypoglycemic drugs",
+      "icd10_code": "Z79.84",
+      "icd10_display": "Long term (current) use of oral hypoglycemic drugs",
+      "rationale": "Patient on Glucophage (metformin) 1000mg twice daily",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "managed with Glucophage (metformin) 1000mg twice daily",
+        "Continue Glucophage 1000mg BID"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Ganglion cyst, left ankle and foot",
+      "icd10_code": "M67.472",
+      "icd10_display": "Ganglion, left ankle and foot",
+      "rationale": "Specific laterality and location documented",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["HPI", "Physical_Exam", "Assessment_Plan"],
+      "key_phrases": [
+        "left ankle swelling with a palpable knot",
+        "Palpable cystic mass consistent with ganglion cyst"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Hypertension",
+      "icd10_code": "I10",
+      "icd10_display": "Essential (primary) hypertension",
+      "rationale": "Listed in past medical history, controlled on amlodipine",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "Hypertension - controlled on amlodipine",
+        "Well controlled. Continue current regimen"
+      ]
+    }
+  ],
+  "notes": "This note requires context-aware reasoning to: (1) Infer Type 2 from Glucophage usage, (2) Determine polyneuropathy vs unspecified neuropathy based on distribution, (3) Link laterality (left) to specific nerve codes. NER baseline may miss the specificity."
+}

@@ -1,0 +1,136 @@
+{
+  "note_id": "note_003_amazon_119272",
+  "description": "Multi-chronic patient with diabetes, kidney transplant, heart disease",
+  "expected_extractions": [
+    {
+      "level": "sentence_level",
+      "condition": "Uncontrolled diabetes mellitus",
+      "icd10_code": null,
+      "rationale": "Generic mention without specific complication context",
+      "codable": false
+    },
+    {
+      "level": "context_aware",
+      "condition": "Type 2 diabetes mellitus with hyperglycemia",
+      "icd10_code": "E11.65",
+      "icd10_display": "Type 2 diabetes mellitus with hyperglycemia",
+      "rationale": "HbA1c 11.1% indicates poor control and hyperglycemia. Home readings 180-280 mg/dL consistently elevated. Type 2 specified in past medical history.",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["HPI", "Past_History_Medical", "Diagnostic_Testing", "Assessment_Plan"],
+      "key_phrases": [
+        "blood sugar control has been suboptimal",
+        "blood glucose at home with readings typically ranging from 180-280 mg/dL",
+        "HbA1c: 11.1% (significantly elevated, indicating poor glycemic control)",
+        "Fasting glucose: 245 mg/dL",
+        "Diabetes mellitus Type 2",
+        "Diabetes mellitus with hyperglycemia, uncontrolled"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "icd10_code": "E11.22",
+      "icd10_display": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "rationale": "Patient has history of diabetic nephropathy that led to ESRD and kidney transplant. Diabetes with CKD documented.",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "Diabetic nephropathy - led to ESRD and transplant",
+        "Chronic kidney disease - Stage 5, status post kidney transplant",
+        "Diabetes mellitus with diabetic chronic kidney disease",
+        "Patient's original kidney failure was due to diabetic nephropathy"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Long term use of insulin",
+      "icd10_code": "Z79.4",
+      "icd10_display": "Long term (current) use of insulin",
+      "rationale": "Currently insulin-dependent, using Lantus and Humalog",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["HPI", "Past_History_Medical"],
+      "key_phrases": [
+        "Currently using Lantus (insulin glargine) 30 units at bedtime and Humalog (insulin lispro) sliding scale",
+        "currently insulin-dependent"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Chronic kidney disease status post kidney transplant",
+      "icd10_code": "N18.6",
+      "icd10_display": "End stage renal disease",
+      "rationale": "History of ESRD, though currently transplanted, original diagnosis remains relevant",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["HPI", "Past_History_Medical"],
+      "key_phrases": [
+        "end-stage renal disease status post kidney transplant",
+        "End-stage renal disease - transplanted"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Kidney transplant status",
+      "icd10_code": "Z94.0",
+      "icd10_display": "Kidney transplant status",
+      "rationale": "Current status post kidney transplant 5 years ago",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["HPI", "Past_History_Medical", "Past_History_Surgical", "Assessment_Plan"],
+      "key_phrases": [
+        "status post kidney transplant 5 years ago",
+        "Kidney transplant - 5 years ago, living donor",
+        "Transplant kidney function stable",
+        "Chronic kidney disease, status post kidney transplant"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Coronary artery disease",
+      "icd10_code": "I25.10",
+      "icd10_display": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "rationale": "History of coronary artery disease with prior CABG, currently asymptomatic",
+      "codable": true,
+      "hcc": true,
+      "evidence_sections": ["HPI", "Past_History_Medical", "Past_History_Surgical", "Assessment_Plan"],
+      "key_phrases": [
+        "coronary artery disease",
+        "Coronary artery disease - status post CABG 6 years ago",
+        "History of CABG, currently asymptomatic"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "icd10_display": "Hyperlipidemia, unspecified",
+      "rationale": "Listed in past medical history, on statin therapy",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["HPI", "Past_History_Medical", "Diagnostic_Testing", "Assessment_Plan"],
+      "key_phrases": [
+        "hyperlipidemia",
+        "Hyperlipidemia - on statin therapy",
+        "On statin therapy with LDL 98 mg/dL"
+      ]
+    },
+    {
+      "level": "context_aware",
+      "condition": "Hypertension",
+      "icd10_code": "I10",
+      "icd10_display": "Essential (primary) hypertension",
+      "rationale": "Listed in past medical history, controlled on multiple agents",
+      "codable": true,
+      "hcc": false,
+      "evidence_sections": ["HPI", "Past_History_Medical", "Assessment_Plan"],
+      "key_phrases": [
+        "Hypertension - controlled on multiple agents",
+        "Blood pressure 138/86"
+      ]
+    }
+  ],
+  "notes": "This complex multi-chronic case requires: (1) Linking HbA1c 11.1% to hyperglycemia, (2) Connecting diabetic nephropathy history to current CKD and transplant status, (3) Maintaining all chronic disease codes (diabetes, CKD, CAD, hyperlipidemia, hypertension), (4) Recognizing both E11.65 and E11.22 can be coded together as patient has both hyperglycemia and diabetic CKD. This is a challenging case for all approaches."
+}

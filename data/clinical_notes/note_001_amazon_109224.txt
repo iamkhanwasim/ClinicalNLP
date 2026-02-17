@@ -1,0 +1,29 @@
+# Clinical Note: Patient Visit 109224
+
+## HPI (History of Present Illness)
+
+Patient presents for diabetes management follow-up. Reports that blood sugar levels have been suboptimal, with a recent reading of 425 mg/dL taken at home this morning. Patient admits to not consistently taking prescribed medications due to insurance coverage issues. Currently administering daily insulin injections but reports difficulty affording supplies. Denies any recent hypoglycemic episodes. No complaints of polyuria, polydipsia, or polyphagia at this time, though these symptoms were present at initial diagnosis.
+
+## Past_History_Medical
+
+- Diabetes mellitus, uncontrolled - diagnosed 8 years ago
+- History of cataracts - bilateral, surgically corrected 3 years ago
+- Hypertension - well controlled on current medication regimen
+
+## Assessment_Plan
+
+### Diabetes mellitus, uncontrolled
+
+Blood glucose significantly elevated at 425 mg/dL, indicating poor glycemic control. Patient non-compliant with oral hypoglycemic agents due to financial constraints.
+
+Plan:
+1. Order HbA1c testing to assess average glucose control over past 3 months
+2. Discuss medication adherence and explore patient assistance programs for medication costs
+3. Assess insulin access and dosing - may need to adjust current regimen
+4. Schedule follow-up in 2 weeks to review lab results
+5. Reinforce importance of regular blood glucose monitoring
+6. Dietary counseling referral
+
+### Hypertension
+
+Currently stable on lisinopril. Continue current therapy. Blood pressure today 128/82.

@@ -1,0 +1,69 @@
+# Clinical Note: Patient Visit 103222
+
+## HPI (History of Present Illness)
+
+Patient presents for follow-up after missing last scheduled appointment. Chief complaint is left ankle swelling with a palpable knot that has been present for approximately 3 weeks. Patient reports this feels similar to a ganglion cyst removed from right wrist 2 years ago. Additionally, patient describes numbness in left foot, particularly in toes, which has been gradually worsening over the past 6 months. Describes sensation as "tingling" and "pins and needles," consistent with paresthesia. No recent trauma to the ankle or foot.
+
+## ROS (Review of Systems)
+
+### Constitutional
+No fever, chills, or unintentional weight changes.
+
+### Musculoskeletal
+Left ankle swelling with palpable mass. No joint pain or limitation of movement. No other joint swelling.
+
+### Neurological
+Paresthesia of left foot, primarily affecting toes. Describes numbness and tingling sensation. No weakness noted.
+
+### Psychiatric
+Mood stable. No depression or anxiety reported.
+
+## Past_History_Medical
+
+- Diabetes mellitus - Type 2, managed with Glucophage (metformin) 1000mg twice daily
+- Hypertension - controlled on amlodipine
+- Peripheral neuropathy - managed with Neurontin (gabapentin) 300mg three times daily
+- History of ganglion cyst, right wrist - surgically excised 2 years ago
+
+## Physical_Exam
+
+Vital Signs: BP 132/84, HR 78, Temp 98.2°F
+
+Left ankle: Visible swelling lateral aspect, approximately 2cm palpable, mobile, non-tender mass. No erythema or warmth. Range of motion intact.
+
+Neurological: Decreased sensation to light touch and pinprick in left foot, affecting toes 1-5. Monofilament testing shows diminished sensation plantar surface. Deep tendon reflexes diminished at ankle bilaterally.
+
+## Assessment_Plan
+
+### Ganglion cyst, left ankle
+
+Palpable cystic mass consistent with ganglion cyst. Similar to previous presentation on wrist.
+
+Plan:
+1. Order ultrasound of left ankle to confirm diagnosis
+2. Discuss treatment options: observation vs. aspiration vs. surgical excision
+3. If patient desires intervention, refer to orthopedics
+
+### Diabetic peripheral neuropathy with foot involvement
+
+Progressive neuropathy of left foot. Currently managed with Neurontin, but symptoms progressing.
+
+Plan:
+1. Increase Neurontin to 600mg three times daily
+2. Reinforce importance of diabetic foot care
+3. Consider referral to podiatry for specialized diabetic foot evaluation
+4. Assess glycemic control - order HbA1c
+
+### Diabetes mellitus, Type 2
+
+Currently on Glucophage (metformin). Patient reports good medication compliance.
+
+Plan:
+1. Continue Glucophage 1000mg BID
+2. Order HbA1c to assess control
+3. Recheck fasting glucose
+4. Continue with long-term oral hypoglycemic therapy
+
+### Hypertension
+
+Well controlled. Continue current regimen.

@@ -1,0 +1,106 @@
+# Clinical Note: Patient Visit 119272
+
+## HPI (History of Present Illness)
+
+Patient presents for routine follow-up of multiple chronic conditions. This is a complex patient with history of end-stage renal disease status post kidney transplant 5 years ago, coronary artery disease, diabetes mellitus, hyperlipidemia, and hypertension. Patient reports generally feeling well but notes that blood sugar control has been suboptimal despite insulin therapy. Currently using Lantus (insulin glargine) 30 units at bedtime and Humalog (insulin lispro) sliding scale with meals. Patient monitors blood glucose at home with readings typically ranging from 180-280 mg/dL. Denies chest pain, shortness of breath, or edema. Transplant kidney function has been stable per recent labs from transplant clinic.
+
+## Past_History_Medical
+
+- Diabetes mellitus Type 2 - diagnosed 15 years ago, currently insulin-dependent
+- Chronic kidney disease - Stage 5, status post kidney transplant 5 years ago
+- End-stage renal disease - transplanted, on immunosuppressive therapy
+- Coronary artery disease - status post CABG 6 years ago
+- Hyperlipidemia - on statin therapy
+- Hypertension - controlled on multiple agents
+- Diabetic nephropathy - led to ESRD and transplant
+
+## Past_History_Surgical
+
+- Kidney transplant - 5 years ago, living donor (brother)
+- Coronary artery bypass grafting (CABG) - 6 years ago, triple vessel
+- Umbilical hernia repair - 3 years ago
+- Total hip arthroplasty, right - 2 years ago due to avascular necrosis
+
+## Diagnostic_Testing
+
+Recent labs from transplant clinic 1 week ago:
+- Creatinine: 1.4 mg/dL (stable, baseline post-transplant)
+- eGFR: 52 mL/min (stable)
+- Tacrolimus level: 8.2 ng/mL (therapeutic)
+
+Labs ordered today:
+- HbA1c: 11.1% (significantly elevated, indicating poor glycemic control)
+- Fasting glucose: 245 mg/dL
+- Lipid panel: LDL 98, HDL 42, Triglycerides 185
+- Comprehensive metabolic panel: pending
+
+## Physical_Exam
+
+Vital Signs: BP 138/86, HR 72, Weight 198 lbs (increased 4 lbs from last visit), Temp 98.6°F
+
+General: Alert, oriented, no acute distress
+Cardiovascular: Regular rate and rhythm, no murmurs. No peripheral edema.
+Respiratory: Clear to auscultation bilaterally
+Abdomen: Soft, non-tender. Transplant kidney palpable in right lower quadrant, non-tender.
+Extremities: No edema. Pulses intact bilaterally.
+
+## Assessment_Plan
+
+### Diabetes mellitus with hyperglycemia, uncontrolled
+
+HbA1c of 11.1% indicates very poor glycemic control over the past 3 months. Home glucose readings consistently elevated in the 180-280 range. Currently on basal-bolus insulin regimen but dosing appears insufficient.
+
+Plan:
+1. Increase Lantus to 40 units at bedtime
+2. Adjust Humalog sliding scale - provide updated dosing instructions
+3. Reinforce carbohydrate counting and meal planning
+4. Diabetes education referral for insulin management review
+5. Recheck HbA1c in 3 months - goal <7.5% given comorbidities
+6. Close monitoring given immunosuppression and increased infection risk with hyperglycemia
+
+### Chronic kidney disease, status post kidney transplant
+
+Transplant kidney function stable with creatinine 1.4 (baseline). Patient continues under care of transplant nephrology.
+
+Plan:
+1. Continue current immunosuppressive regimen (tacrolimus, mycophenolate)
+2. Next transplant clinic visit in 3 weeks
+3. Monitor for any signs of rejection or infection
+4. Emphasize importance of medication compliance
+
+### Diabetes mellitus with diabetic chronic kidney disease
+
+Patient's original kidney failure was due to diabetic nephropathy. Now status post transplant but diabetes control remains suboptimal, posing risk to transplant kidney.
+
+Plan:
+1. Aggressive glucose control as outlined above
+2. Blood pressure control crucial - target <130/80
+3. Continue ACE inhibitor for renal protection
+4. Avoid nephrotoxic agents
+
+### Coronary artery disease
+
+History of CABG, currently asymptomatic. No chest pain or dyspnea.
+
+Plan:
+1. Continue aspirin, beta-blocker, statin therapy
+2. LDL at goal (<100) on current statin dose
+3. Continue cardiac-protective medications
+
+### Hyperlipidemia
+
+On statin therapy with LDL 98 mg/dL, at goal for high-risk patient.
+
+Plan:
+1. Continue atorvastatin 40mg daily
+2. Recheck lipid panel in 6 months
+
+### Hypertension
+
+Blood pressure 138/86, slightly above goal but acceptable given patient's multiple comorbidities.
+
+Plan:
+1. Continue lisinopril and amlodipine
+2. Monitor closely - adjust if consistently >140/90
+
+Follow-up in 6 weeks to reassess glucose control and review repeat HbA1c in 3 months. Patient to continue regular visits with transplant nephrology and cardiology.
