@@ -1,0 +1,964 @@
+{
+  "note_id": "note_001_amazon_109224",
+  "approach": "approach_3",
+  "ner_model": "stanza_clinical",
+  "embedding_model": "pubmedbert",
+  "extractions": [
+    {
+      "condition": "any recent hypoglycemic episodes",
+      "snomed_concept": {
+        "cui": "870528001",
+        "snomed_code": "870528001",
+        "display": "Newly diagnosed type 1 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Newly diagnosed diabetes mellitus type 1",
+          "Newly diagnosed type 1 diabetes mellitus",
+          "Newly diagnosed type 1 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7315432521759059,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "any recent hypoglycemic episodes",
+          "section": "unknown",
+          "char_start": 443,
+          "char_end": 475,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "any recent hypoglycemic episodes",
+        "start_char": 443,
+        "end_char": 475,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "polyphagia",
+      "snomed_concept": {
+        "cui": "123763000",
+        "snomed_code": "123763000",
+        "display": "Houssay's syndrome (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Houssay's syndrome",
+          "Houssay's syndrome (disorder)",
+          "Houssay syndrome"
+        ]
+      },
+      "icd10_code": {
+        "code": "E13.9",
+        "display": "Other specified diabetes mellitus without complications",
+        "billable": true,
+        "category": "E13",
+        "hcc": true
+      },
+      "confidence": 0.8994242585225576,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "polyphagia",
+          "section": "unknown",
+          "char_start": 519,
+          "char_end": 529,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "polyphagia",
+        "start_char": 519,
+        "end_char": 529,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "these symptoms",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7267476441133325,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "these symptoms",
+          "section": "unknown",
+          "char_start": 551,
+          "char_end": 565,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "these symptoms",
+        "start_char": 551,
+        "end_char": 565,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Past_History_Medical",
+      "snomed_concept": {
+        "cui": "8801005",
+        "snomed_code": "8801005",
+        "display": "Secondary diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Secondary diabetes mellitus",
+          "Secondary diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E13.9",
+        "display": "Other specified diabetes mellitus without complications",
+        "billable": true,
+        "category": "E13",
+        "hcc": true
+      },
+      "confidence": 0.7296507246954919,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Past_History_Medical",
+          "section": "unknown",
+          "char_start": 605,
+          "char_end": 625,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Past_History_Medical",
+        "start_char": 605,
+        "end_char": 625,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 629,
+          "char_end": 646,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 629,
+        "end_char": 646,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "uncontrolled",
+      "snomed_concept": {
+        "cui": "237623001",
+        "snomed_code": "237623001",
+        "display": "Acute hyperglycemia (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Acute hyperglycemia",
+          "Acute hyperglycaemia",
+          "Acute hyperglycemia (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7419612311711133,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "uncontrolled",
+          "section": "unknown",
+          "char_start": 648,
+          "char_end": 660,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "uncontrolled",
+        "start_char": 648,
+        "end_char": 660,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "cataracts",
+      "snomed_concept": {
+        "cui": "399871005",
+        "snomed_code": "399871005",
+        "display": "Visually threatening retinopathy due to diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Visually threatening diabetic retinopathy",
+          "Sight threatening diabetic retinopathy",
+          "Visually threatening retinopathy due to diabetes mellitus (disorder)",
+          "Visually threatening retinopathy due to diabetes mellitus"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.319",
+        "display": "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema",
+        "billable": true,
+        "category": "E11",
+        "hcc": true
+      },
+      "confidence": 0.9195499861283835,
+      "inference_strength": "explicit",
+      "needs_review": false,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "cataracts",
+          "section": "unknown",
+          "char_start": 698,
+          "char_end": 707,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "cataracts",
+        "start_char": 698,
+        "end_char": 707,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "71701000119105",
+        "snomed_code": "71701000119105",
+        "display": "Hypertension in chronic kidney disease due to type 1 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hypertension in chronic kidney disease due to type 1 diabetes mellitus",
+          "Hypertension in chronic kidney disease due to type 1 diabetes mellitus (disorder)",
+          "Hypertension in chronic kidney disease due to type I diabetes mellitus"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.22",
+        "display": "Type 1 diabetes mellitus with diabetic chronic kidney disease",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.4826043786315298,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 756,
+          "char_end": 768,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 756,
+        "end_char": 768,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 842,
+          "char_end": 859,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 842,
+        "end_char": 859,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "uncontrolled",
+      "snomed_concept": {
+        "cui": "237623001",
+        "snomed_code": "237623001",
+        "display": "Acute hyperglycemia (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Acute hyperglycemia",
+          "Acute hyperglycaemia",
+          "Acute hyperglycemia (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7419612311711133,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "uncontrolled",
+          "section": "unknown",
+          "char_start": 861,
+          "char_end": 873,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "uncontrolled",
+        "start_char": 861,
+        "end_char": 873,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Blood glucose",
+      "snomed_concept": {
+        "cui": "441690002",
+        "snomed_code": "441690002",
+        "display": "Drug-induced hyperglycemia (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Drug-induced hyperglycemia (disorder)",
+          "Drug-induced hyperglycemia",
+          "Drug-induced hyperglycaemia"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7198558861142454,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Blood glucose",
+          "section": "unknown",
+          "char_start": 875,
+          "char_end": 888,
+          "reasoning": "Extracted by stanza_clinical NER as TEST"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Blood glucose",
+        "start_char": 875,
+        "end_char": 888,
+        "section": "unknown",
+        "entity_type": "lab_value",
+        "label": "TEST",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "elevated",
+      "snomed_concept": {
+        "cui": "237623001",
+        "snomed_code": "237623001",
+        "display": "Acute hyperglycemia (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Acute hyperglycemia",
+          "Acute hyperglycaemia",
+          "Acute hyperglycemia (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7453251170178364,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "elevated",
+          "section": "unknown",
+          "char_start": 903,
+          "char_end": 911,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "elevated",
+        "start_char": 903,
+        "end_char": 911,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "poor glycemic control",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.8,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "poor glycemic control",
+          "section": "unknown",
+          "char_start": 937,
+          "char_end": 958,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "poor glycemic control",
+        "start_char": 937,
+        "end_char": 958,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "HbA1c testing",
+      "snomed_concept": {
+        "cui": "703138006",
+        "snomed_code": "703138006",
+        "display": "Type II diabetes mellitus in remission (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Type II diabetes mellitus in remission (disorder)",
+          "Type II diabetes mellitus in remission",
+          "Type 2 diabetes mellitus in remission"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.729252383338551,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "HbA1c testing",
+          "section": "unknown",
+          "char_start": 1058,
+          "char_end": 1071,
+          "reasoning": "Extracted by stanza_clinical NER as TEST"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "HbA1c testing",
+        "start_char": 1058,
+        "end_char": 1071,
+        "section": "unknown",
+        "entity_type": "lab_value",
+        "label": "TEST",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "average glucose control",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7322866621009071,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "average glucose control",
+          "section": "unknown",
+          "char_start": 1082,
+          "char_end": 1105,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "average glucose control",
+        "start_char": 1082,
+        "end_char": 1105,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "medication adherence",
+      "snomed_concept": {
+        "cui": "1142044000",
+        "snomed_code": "1142044000",
+        "display": "Pre-existing malnutrition-related diabetes mellitus in pregnancy (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing malnutrition-related diabetes mellitus in pregnancy",
+          "Pre-existing malnutrition-related diabetes mellitus in pregnancy (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E13.9",
+        "display": "Other specified diabetes mellitus without complications",
+        "billable": true,
+        "category": "E13",
+        "hcc": true
+      },
+      "confidence": 0.8682299481344504,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "medication adherence",
+          "section": "unknown",
+          "char_start": 1136,
+          "char_end": 1156,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "medication adherence",
+        "start_char": 1136,
+        "end_char": 1156,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "patient assistance programs",
+      "snomed_concept": {
+        "cui": "1255271005",
+        "snomed_code": "1255271005",
+        "display": "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Juvenile-onset diabetes mellitus, central and peripheral neurodegeneration syndrome",
+          "Combined cerebellar and peripheral ataxia, deafness, diabetes mellitus syndrome",
+          "Combined cerebellar and peripheral ataxia, hearing loss, diabetes mellitus syndrome",
+          "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)",
+          "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.8833542924032534,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "patient assistance programs",
+          "section": "unknown",
+          "char_start": 1169,
+          "char_end": 1196,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "patient assistance programs",
+        "start_char": 1169,
+        "end_char": 1196,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "current regimen",
+      "snomed_concept": {
+        "cui": "1142044000",
+        "snomed_code": "1142044000",
+        "display": "Pre-existing malnutrition-related diabetes mellitus in pregnancy (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing malnutrition-related diabetes mellitus in pregnancy",
+          "Pre-existing malnutrition-related diabetes mellitus in pregnancy (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E13.9",
+        "display": "Other specified diabetes mellitus without complications",
+        "billable": true,
+        "category": "E13",
+        "hcc": true
+      },
+      "confidence": 0.8961413663237935,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "current regimen",
+          "section": "unknown",
+          "char_start": 1275,
+          "char_end": 1290,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "current regimen",
+        "start_char": 1275,
+        "end_char": 1290,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "regular blood glucose monitoring",
+      "snomed_concept": {
+        "cui": "703136005",
+        "snomed_code": "703136005",
+        "display": "Diabetes mellitus in remission (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus in remission (disorder)",
+          "Diabetes mellitus in remission"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.6615052466954253,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "regular blood glucose monitoring",
+          "section": "unknown",
+          "char_start": 1373,
+          "char_end": 1405,
+          "reasoning": "Extracted by stanza_clinical NER as TEST"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "regular blood glucose monitoring",
+        "start_char": 1373,
+        "end_char": 1405,
+        "section": "unknown",
+        "entity_type": "lab_value",
+        "label": "TEST",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "71701000119105",
+        "snomed_code": "71701000119105",
+        "display": "Hypertension in chronic kidney disease due to type 1 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hypertension in chronic kidney disease due to type 1 diabetes mellitus",
+          "Hypertension in chronic kidney disease due to type 1 diabetes mellitus (disorder)",
+          "Hypertension in chronic kidney disease due to type I diabetes mellitus"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.22",
+        "display": "Type 1 diabetes mellitus with diabetic chronic kidney disease",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.4826043786315298,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 1442,
+          "char_end": 1454,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 1442,
+        "end_char": 1454,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "current therapy",
+      "snomed_concept": {
+        "cui": "1255271005",
+        "snomed_code": "1255271005",
+        "display": "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Juvenile-onset diabetes mellitus, central and peripheral neurodegeneration syndrome",
+          "Combined cerebellar and peripheral ataxia, deafness, diabetes mellitus syndrome",
+          "Combined cerebellar and peripheral ataxia, hearing loss, diabetes mellitus syndrome",
+          "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)",
+          "Type 1 diabetes mellitus, central and peripheral neurodegeneration syndrome"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.8735193013917617,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "current therapy",
+          "section": "unknown",
+          "char_start": 1497,
+          "char_end": 1512,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "current therapy",
+        "start_char": 1497,
+        "end_char": 1512,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "review_required_count": 20,
+  "processing_time_ms": 22672.57332801819,
+  "metadata": {
+    "total_entities": 34,
+    "mapped_codes": 21,
+    "skipped_entities": 13,
+    "confidence_threshold": 0.7
+  }
+}

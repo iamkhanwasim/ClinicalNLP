@@ -186,6 +186,9 @@ class SemanticResolver:
         """
         # Embed query text
         query_embedding = self.embedder.encode(entity_text)
+        # encode() returns (1, embedding_dim) for single string, squeeze to (embedding_dim,)
+        if query_embedding.ndim == 2:
+            query_embedding = query_embedding.squeeze()
 
         # If pre-computed embeddings available, use them
         if self.concept_embeddings is not None:
@@ -214,6 +217,8 @@ class SemanticResolver:
             similarities = []
             for concept_id, concept in self.snomed_concepts.items():
                 concept_embedding = self.embedder.encode(concept.display)
+                if concept_embedding.ndim == 2:
+                    concept_embedding = concept_embedding.squeeze()
                 similarity = self._cosine_similarity(query_embedding, concept_embedding)
                 similarities.append((concept, similarity))
 
@@ -276,7 +281,7 @@ def test_semantic_resolver():
     snomed_data_path = Path("data/reference/snomed_diabetes_subset.json")
 
     if not snomed_data_path.exists():
-        print(f"✗ SNOMED data not found at {snomed_data_path}")
+        print(f"SNOMED data not found at {snomed_data_path}")
         print("Run data preparation scripts first.")
         return
 

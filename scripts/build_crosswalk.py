@@ -224,7 +224,7 @@ Supported formats:
     output_path = Path(args.output)
 
     if not input_path.exists():
-        print(f"✗ Input file not found: {input_path}")
+        print(f"Input file not found: {input_path}")
         print(f"\nExpected file: SNOMED CT to ICD-10-CM Map (.txt or .csv)")
         print(f"Typical filename: snomed_icd_10_map.csv_0_0_0.csv or similar")
         print(f"Download from: https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html")

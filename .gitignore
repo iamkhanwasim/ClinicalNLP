@@ -11,6 +11,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+notebooks/
 eggs/
 .eggs/
 lib/
@@ -37,6 +38,7 @@ MANIFEST
 .DS_Store
 
 # Jupyter Notebook
+*.ipynb
 .ipynb_checkpoints
 *.ipynb_checkpoints
 

@@ -209,6 +209,11 @@ class ICD10Code(BaseModel):
     map_rule: Optional[str] = None
     specificity: int = 0
 
+    @property
+    def needs_review(self) -> bool:
+        """Codes with non-explicit inference need review."""
+        return self.inference_strength != "explicit"
+
 
 class EnrichedEntity(BaseModel):
     """

@@ -28,9 +28,11 @@ from src.shared.models import (
     ExtractionResult,
     EvidenceSpan,
     Entity,
+    EntitySpan,
     EnrichedEntity,
     SNOMEDConcept,
-    ICD10Code
+    ICD10Code,
+    ICDCode
 )
 from src.shared.note_parser import NoteParser
 from src.factories.ner_factory import NERFactory
@@ -168,17 +170,16 @@ class Approach3Pipeline:
         return PipelineOutput(
             note_id=note.note_id,
             approach="approach_3",
-            resolution_mode="snomed_embedding",
+            ner_model=self.ner_model_name,
+            embedding_model=self.embedding_model_name,
             extractions=extractions,
+            review_required_count=needs_review_count,
             processing_time_ms=processing_time,
             ner_result=None,  # We don't use old NERResult anymore
             metadata={
                 "total_entities": len(entities),
                 "mapped_codes": len(extractions),
                 "skipped_entities": skipped,
-                "needs_review": needs_review_count,
-                "ner_model": self.ner_model_name,
-                "embedding_model": self.embedding_model_name,
                 "confidence_threshold": self.confidence_threshold
             }
         )
@@ -199,15 +200,18 @@ class Approach3Pipeline:
             ExtractionResult if successful, None otherwise
         """
         # Step 1: Resolve entity to SNOMED concept
-        snomed_concept = self.semantic_resolver.resolve(entity.text)
+        snomed_results = self.semantic_resolver.resolve(entity.text)
 
-        if not snomed_concept:
+        if not snomed_results:
             return None
 
+        # Get top match (highest confidence)
+        snomed_concept, confidence = snomed_results[0]
+
         # Step 2: Map SNOMED concept to ICD-10 codes
-        icd_codes = self.icd10_mapper.map_concept(
-            snomed_concept,
-            semantic_confidence=snomed_concept.confidence
+        icd_codes = self.icd10_mapper.map_snomed_to_icd10(
+            snomed_concept.snomed_code,
+            semantic_confidence=confidence
         )
 
         if not icd_codes:
@@ -222,31 +226,54 @@ class Approach3Pipeline:
             section="unknown",  # We don't have section info from simple NER
             char_start=entity.start_char,
             char_end=entity.end_char,
-            reasoning=f"Extracted by {self.ner_model_name} NER as {entity.entity_type}"
+            reasoning=f"Extracted by {self.ner_model_name} NER as {entity.label}"
+        )
+
+        # Convert Entity to EntitySpan
+        # Map NER label to valid entity type
+        entity_type_map = {
+            'PROBLEM': 'condition',
+            'TREATMENT': 'medication',
+            'TEST': 'lab_value',
+            'Clinical_event': 'condition',
+            'Evidential': 'other',
+            'DISEASE': 'condition',
+            'SYMPTOM': 'symptom',
+            'MEDICATION': 'medication',
+            'PROCEDURE': 'procedure'
+        }
+        entity_type = entity_type_map.get(entity.label, 'other')
+
+        entity_span = EntitySpan(
+            text=entity.text,
+            start_char=entity.start_char,
+            end_char=entity.end_char,
+            section="unknown",
+            entity_type=entity_type,
+            label=entity.label,
+            source_model=self.ner_model_name,
+            confidence=getattr(entity, 'confidence', None)
+        )
+
+        # Create ICDCode from ICD10Code
+        icd_code_obj = ICDCode(
+            code=icd_code.code,
+            display=icd_code.display,
+            billable=icd_code.billable,
+            category=icd_code.code.split('.')[0] if '.' in icd_code.code else icd_code.code[:3],
+            hcc=icd_code.hcc
         )
 
         return ExtractionResult(
             condition=entity.text,
-            resolved_concept=snomed_concept.preferred_term,
-            icd10_code=icd_code.code,
-            icd10_display=icd_code.display,
-            confidence=icd_code.combined_confidence,
-            evidence_spans=[evidence],
-            enrichment_reasoning=None,  # No enrichment in Approach 3
-            source_entity=entity,
-            hcc=icd_code.hcc,
+            snomed_concept=snomed_concept,
+            icd10_code=icd_code_obj,
+            confidence=icd_code.confidence,
             inference_strength=icd_code.inference_strength,
             needs_review=icd_code.needs_review,
-            snomed_concept=snomed_concept,
-            mapping_metadata={
-                "snomed_id": snomed_concept.concept_id,
-                "snomed_confidence": snomed_concept.confidence,
-                "map_priority": icd_code.map_priority,
-                "map_rule": icd_code.map_rule,
-                "specificity": icd_code.specificity,
-                "ner_model": self.ner_model_name,
-                "embedding_model": self.embedding_model_name
-            }
+            evidence_spans=[evidence],
+            enrichment_reasoning="",  # No enrichment in Approach 3
+            source_entity=entity_span
         )
 
     def process_batch(
@@ -318,8 +345,9 @@ if __name__ == "__main__":
     # Run pipeline with default settings
     try:
         pipeline = Approach3Pipeline(
-            ner_model="biobert_ner",
-            embedding_model="biobert",
+            # ner_model="biobert_ner",
+            ner_model="med7",
+            embedding_model="pubmedbert",
             confidence_threshold=0.7,
             top_k=3
         )
@@ -342,7 +370,7 @@ if __name__ == "__main__":
         print(f"\nSaved results to {json_path}")
 
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\nError: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

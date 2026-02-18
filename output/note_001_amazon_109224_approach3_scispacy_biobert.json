@@ -1,0 +1,466 @@
+{
+  "note_id": "note_001_amazon_109224",
+  "approach": "approach_3",
+  "ner_model": "scispacy",
+  "embedding_model": "biobert",
+  "extractions": [
+    {
+      "condition": "diabetes",
+      "snomed_concept": {
+        "cui": "314015001",
+        "snomed_code": "314015001",
+        "display": "Mixed maculopathy due to diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Mixed diabetic maculopathy",
+          "Mixed maculopathy due to diabetes mellitus",
+          "Mixed maculopathy with diabetes mellitus",
+          "Mixed maculopathy due to diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.39",
+        "display": "Type 2 diabetes mellitus with other diabetic ophthalmic complication",
+        "billable": true,
+        "category": "E11",
+        "hcc": true
+      },
+      "confidence": 0.8768494367868588,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "diabetes",
+          "section": "unknown",
+          "char_start": 97,
+          "char_end": 105,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "diabetes",
+        "start_char": 97,
+        "end_char": 105,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "polydipsia",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.7301551400190704,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "polydipsia",
+          "section": "unknown",
+          "char_start": 504,
+          "char_end": 514,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "polydipsia",
+        "start_char": 504,
+        "end_char": 514,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 629,
+          "char_end": 646,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 629,
+        "end_char": 646,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "cataracts",
+      "snomed_concept": {
+        "cui": "314015001",
+        "snomed_code": "314015001",
+        "display": "Mixed maculopathy due to diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Mixed diabetic maculopathy",
+          "Mixed maculopathy due to diabetes mellitus",
+          "Mixed maculopathy with diabetes mellitus",
+          "Mixed maculopathy due to diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.39",
+        "display": "Type 2 diabetes mellitus with other diabetic ophthalmic complication",
+        "billable": true,
+        "category": "E11",
+        "hcc": true
+      },
+      "confidence": 0.8467363518302985,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "cataracts",
+          "section": "unknown",
+          "char_start": 698,
+          "char_end": 707,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "cataracts",
+        "start_char": 698,
+        "end_char": 707,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "199230006",
+        "snomed_code": "199230006",
+        "display": "Pre-existing type 2 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing type 2 diabetes mellitus",
+          "Pre-existing type 2 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7460093196337335,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 756,
+          "char_end": 768,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 756,
+        "end_char": 768,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 842,
+          "char_end": 859,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 842,
+        "end_char": 859,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "glucose",
+      "snomed_concept": {
+        "cui": "735537007",
+        "snomed_code": "735537007",
+        "display": "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis",
+          "Hyperosmolar hyperglycaemic coma due to diabetes mellitus without ketoacidosis"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.01",
+        "display": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.8576513182539677,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "glucose",
+          "section": "unknown",
+          "char_start": 881,
+          "char_end": 888,
+          "reasoning": "Extracted by scispacy NER as CHEMICAL"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "glucose",
+        "start_char": 881,
+        "end_char": 888,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "CHEMICAL",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "glucose",
+      "snomed_concept": {
+        "cui": "735537007",
+        "snomed_code": "735537007",
+        "display": "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis",
+          "Hyperosmolar hyperglycaemic coma due to diabetes mellitus without ketoacidosis"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.01",
+        "display": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.8576513182539677,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "glucose",
+          "section": "unknown",
+          "char_start": 1090,
+          "char_end": 1097,
+          "reasoning": "Extracted by scispacy NER as CHEMICAL"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "glucose",
+        "start_char": 1090,
+        "end_char": 1097,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "CHEMICAL",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "glucose",
+      "snomed_concept": {
+        "cui": "735537007",
+        "snomed_code": "735537007",
+        "display": "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis",
+          "Hyperosmolar hyperglycaemic coma due to diabetes mellitus without ketoacidosis"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.01",
+        "display": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.8576513182539677,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "glucose",
+          "section": "unknown",
+          "char_start": 1387,
+          "char_end": 1394,
+          "reasoning": "Extracted by scispacy NER as CHEMICAL"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "glucose",
+        "start_char": 1387,
+        "end_char": 1394,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "CHEMICAL",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "199230006",
+        "snomed_code": "199230006",
+        "display": "Pre-existing type 2 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing type 2 diabetes mellitus",
+          "Pre-existing type 2 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7460093196337335,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 1442,
+          "char_end": 1454,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 1442,
+        "end_char": 1454,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "review_required_count": 10,
+  "processing_time_ms": 17488.710403442383,
+  "metadata": {
+    "total_entities": 14,
+    "mapped_codes": 10,
+    "skipped_entities": 4,
+    "confidence_threshold": 0.7
+  }
+}

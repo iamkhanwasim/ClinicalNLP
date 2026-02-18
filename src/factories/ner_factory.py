@@ -69,37 +69,30 @@ class StanzaNERExtractor(BaseNERExtractor):
         self.nlp = None
 
     def load_model(self):
-        """Load Stanza clinical NER model."""
+        """Load Stanza biomedical NER model."""
         try:
             import stanza
 
-            # Download clinical model if not present
-            # stanza.download('en', package='mimic', processors='tokenize,ner')
+            # Use default English NER model with biomedical entities
+            # MIMIC package only has tokenizer, not NER
+            logger.info(f"Downloading Stanza English NER model...")            
+            stanza.download('en', package='i2b2', processors='tokenize,ner')            
 
-            logger.info(f"Loading Stanza clinical NER model...")
+            logger.info(f"Loading Stanza biomedical NER model...")
             self.nlp = stanza.Pipeline(
                 lang='en',
-                package='mimic',  # Clinical model trained on MIMIC-III
-                processors='tokenize,ner',
+                processors={
+                    'tokenize': 'default',
+                    'ner': 'i2b2'
+                },
                 use_gpu=False,  # Set to True if GPU available
                 logging_level='ERROR'
             )
-            logger.info(f"Stanza model loaded")
+            logger.info(f"Stanza NER model loaded")
 
         except ImportError:
             raise ImportError(
                 "Stanza not installed. Install with: pip install stanza"
-            )
-        except Exception as e:
-            logger.warning(f"Could not load Stanza MIMIC model: {e}")
-            logger.info("Falling back to default biomedical model...")
-            import stanza
-            # Fallback to default biomedical NER
-            self.nlp = stanza.Pipeline(
-                lang='en',
-                processors='tokenize,ner',
-                use_gpu=False,
-                logging_level='ERROR'
             )
 
     def extract_entities(self, text: str) -> List[Entity]:
@@ -353,7 +346,7 @@ def test_ner_extractors():
     print("=" * 60)
     print(f"Input text:\n{sample_text}\n")
 
-    for model_name in ["stanza", "scispacy", "med7", "biobert"]:
+    for model_name in ["scispacy"]: #, ["stanza","scispacy", "med7", "biobert"]:
         try:
             print(f"\n{model_name.upper()} Results:")
             print("-" * 60)

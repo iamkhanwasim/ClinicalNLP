@@ -138,11 +138,11 @@ class OutputFormatter:
             # Format inference strength
             inf_str = extraction.inference_strength[0].upper()  # E, S, W
             if extraction.inference_strength == "explicit":
-                inf_display = f"✓{inf_str}"
+                inf_display = f"[OK]{inf_str}"
             elif extraction.inference_strength == "strong_suggestion":
-                inf_display = f"⚠{inf_str}"
+                inf_display = f"[!]{inf_str}"
             else:
-                inf_display = f"⚠⚠{inf_str}"
+                inf_display = f"[!!]{inf_str}"
 
             row = [
                 extraction.condition,
@@ -150,8 +150,8 @@ class OutputFormatter:
                 self._truncate(extraction.icd10_code.display, 40),
                 f"{extraction.confidence:.2f}",
                 inf_display,
-                "⚠" if extraction.needs_review else "✓",
-                "✓" if extraction.icd10_code.hcc else ""
+                "[!]" if extraction.needs_review else "[OK]",
+                "[HCC]" if extraction.icd10_code.hcc else ""
             ]
 
             if show_evidence:
@@ -190,11 +190,11 @@ class OutputFormatter:
         for i, extraction in enumerate(output.extractions, 1):
             # Inference indicator
             if extraction.inference_strength == "explicit":
-                inf_indicator = "✓"
+                inf_indicator = "[OK]"
             elif extraction.inference_strength == "strong_suggestion":
-                inf_indicator = "⚠"
+                inf_indicator = "[!]"
             else:
-                inf_indicator = "⚠⚠"
+                inf_indicator = "[!!]"
 
             result.append(f"{i}. {inf_indicator} {extraction.condition}")
             result.append(f"   ICD-10: {extraction.icd10_code.code} - {extraction.icd10_code.display}")
@@ -204,7 +204,7 @@ class OutputFormatter:
             result.append(f"   HCC: {'Yes' if extraction.icd10_code.hcc else 'No'}")
 
             if extraction.needs_review:
-                result.append(f"   ⚠ REVIEW REQUIRED: {extraction.review_reason}")
+                result.append(f"   [!] REVIEW REQUIRED: {extraction.review_reason}")
 
             if extraction.enrichment_reasoning:
                 result.append(f"   Reasoning: {extraction.enrichment_reasoning}")
@@ -267,7 +267,7 @@ class OutputFormatter:
             # Check which approaches found this code
             for output in outputs:
                 found = any(e.icd10_code.code == code for e in output.extractions)
-                row.append("✓" if found else "")
+                row.append("[OK]" if found else "")
 
             rows.append(row)
 
@@ -325,11 +325,11 @@ class OutputFormatter:
             for extraction in output.extractions:
                 # Inference strength indicator
                 if extraction.inference_strength == "explicit":
-                    inf_display = "✓E"
+                    inf_display = "[OK]E"
                 elif extraction.inference_strength == "strong_suggestion":
-                    inf_display = "⚠S"
+                    inf_display = "[!]S"
                 else:
-                    inf_display = "⚠⚠W"
+                    inf_display = "[!!]W"
 
                 rows.append([
                     extraction.condition,
@@ -337,8 +337,8 @@ class OutputFormatter:
                     self._truncate(extraction.icd10_code.display, 30),
                     f"{extraction.confidence:.2f}",
                     inf_display,
-                    "⚠" if extraction.needs_review else "✓",
-                    "✓" if extraction.icd10_code.hcc else ""
+                    "[!]" if extraction.needs_review else "[OK]",
+                    "[HCC]" if extraction.icd10_code.hcc else ""
                 ])
 
             md.append(tabulate(rows, headers=headers, tablefmt="pipe"))
@@ -350,7 +350,7 @@ class OutputFormatter:
                 md.append(f"**{i}. {extraction.condition}** ({extraction.icd10_code.code})")
                 md.append(f"- Inference: {extraction.inference_strength}")
                 if extraction.needs_review:
-                    md.append(f"- ⚠ Review Required: {extraction.review_reason}")
+                    md.append(f"- [!] Review Required: {extraction.review_reason}")
 
                 if extraction.evidence_spans:
                     md.append("- Evidence:")
@@ -440,8 +440,8 @@ class OutputFormatter:
 
         self.console.print(f"\n[bold]Inference Breakdown:[/bold]")
         self.console.print(f"  [green]Explicit: {explicit_count}[/green]")
-        self.console.print(f"  [yellow]⚠ Strong suggestion: {strong_count}[/yellow]")
-        self.console.print(f"  [red]⚠⚠ Weak: {weak_count}[/red]")
+        self.console.print(f"  [yellow][!] Strong suggestion: {strong_count}[/yellow]")
+        self.console.print(f"  [red][!!] Weak: {weak_count}[/red]")
 
         # Individual extractions
         if output.extractions:
@@ -455,7 +455,7 @@ class OutputFormatter:
             self.console.print()
             self.console.print(
                 Panel(
-                    f"[bold red]⚠ {output.review_required_count} extraction(s) require review[/bold red]\n"
+                    f"[bold red][!] {output.review_required_count} extraction(s) require review[/bold red]\n"
                     "Please manually verify non-explicit inferences.",
                     style="red"
                 )
@@ -472,13 +472,13 @@ class OutputFormatter:
         # Determine style based on inference strength
         if extraction.inference_strength == "explicit":
             strength_style = Style(color="green", bold=True)
-            strength_icon = "✓"
+            strength_icon = "[OK]"
         elif extraction.inference_strength == "strong_suggestion":
             strength_style = Style(color="yellow", bold=True)
-            strength_icon = "⚠"
+            strength_icon = "[!]"
         else:  # weak
             strength_style = Style(color="red", bold=True)
-            strength_icon = "⚠⚠"
+            strength_icon = "[!!]"
 
         # Condition
         self.console.print(f"  Condition: [bold]{extraction.condition}[/bold]")
@@ -506,7 +506,7 @@ class OutputFormatter:
 
         # Review Status
         if extraction.needs_review:
-            self.console.print(f"  Review: [bold red]⚠ REQUIRED[/bold red]")
+            self.console.print(f"  Review: [bold red][!] REQUIRED[/bold red]")
             self.console.print(f"  Reason: {extraction.review_reason}")
 
         # Evidence (if requested and available)

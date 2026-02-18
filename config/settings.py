@@ -141,4 +141,4 @@ if __name__ == "__main__":
     if validate_paths():
         print("All required files present")
     else:
-        print("✗ Some required files are missing")
+        print("Some required files are missing")

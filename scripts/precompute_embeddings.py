@@ -170,7 +170,7 @@ Each .npz file contains:
 
     # Validate input
     if not snomed_data_path.exists():
-        logger.error(f"✗ SNOMED data not found: {snomed_data_path}")
+        logger.error(f"SNOMED data not found: {snomed_data_path}")
         logger.error("Run scripts/extract_snomed_diabetes.py first")
         return 1
 
@@ -191,7 +191,7 @@ Each .npz file contains:
         try:
             precompute_embeddings(concepts, model_name, output_path)
         except Exception as e:
-            logger.error(f"✗ Failed to process {model_name}: {e}")
+            logger.error(f"Failed to process {model_name}: {e}")
             import traceback
             traceback.print_exc()
             continue

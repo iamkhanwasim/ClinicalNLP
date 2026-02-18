@@ -1,0 +1,826 @@
+{
+  "note_id": "note_001_amazon_109224",
+  "approach": "approach_3",
+  "ner_model": "stanza_clinical",
+  "embedding_model": "biobert",
+  "extractions": [
+    {
+      "condition": "polydipsia",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.7301551400190704,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "polydipsia",
+          "section": "unknown",
+          "char_start": 504,
+          "char_end": 514,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "polydipsia",
+        "start_char": 504,
+        "end_char": 514,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "these symptoms",
+      "snomed_concept": {
+        "cui": "80394007",
+        "snomed_code": "80394007",
+        "display": "Hyperglycemia (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hyperglycemia",
+          "Hyperglycaemia",
+          "Hyperglycemia (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7289326715185767,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "these symptoms",
+          "section": "unknown",
+          "char_start": 551,
+          "char_end": 565,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "these symptoms",
+        "start_char": 551,
+        "end_char": 565,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Past_History_Medical",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.709517144589193,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Past_History_Medical",
+          "section": "unknown",
+          "char_start": 605,
+          "char_end": 625,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Past_History_Medical",
+        "start_char": 605,
+        "end_char": 625,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 629,
+          "char_end": 646,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 629,
+        "end_char": 646,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "uncontrolled",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7305393895441128,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "uncontrolled",
+          "section": "unknown",
+          "char_start": 648,
+          "char_end": 660,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "uncontrolled",
+        "start_char": 648,
+        "end_char": 660,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "cataracts",
+      "snomed_concept": {
+        "cui": "314015001",
+        "snomed_code": "314015001",
+        "display": "Mixed maculopathy due to diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Mixed diabetic maculopathy",
+          "Mixed maculopathy due to diabetes mellitus",
+          "Mixed maculopathy with diabetes mellitus",
+          "Mixed maculopathy due to diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.39",
+        "display": "Type 2 diabetes mellitus with other diabetic ophthalmic complication",
+        "billable": true,
+        "category": "E11",
+        "hcc": true
+      },
+      "confidence": 0.8467363518302985,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "cataracts",
+          "section": "unknown",
+          "char_start": 698,
+          "char_end": 707,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "cataracts",
+        "start_char": 698,
+        "end_char": 707,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "199230006",
+        "snomed_code": "199230006",
+        "display": "Pre-existing type 2 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing type 2 diabetes mellitus",
+          "Pre-existing type 2 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7460093196337335,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 756,
+          "char_end": 768,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 756,
+        "end_char": 768,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "unknown",
+          "char_start": 842,
+          "char_end": 859,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 842,
+        "end_char": 859,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "uncontrolled",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7305393895441128,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "uncontrolled",
+          "section": "unknown",
+          "char_start": 861,
+          "char_end": 873,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "uncontrolled",
+        "start_char": 861,
+        "end_char": 873,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "poor glycemic control",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.8,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "poor glycemic control",
+          "section": "unknown",
+          "char_start": 937,
+          "char_end": 958,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "poor glycemic control",
+        "start_char": 937,
+        "end_char": 958,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "financial constraints",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.6820879102079297,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "financial constraints",
+          "section": "unknown",
+          "char_start": 1019,
+          "char_end": 1040,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "financial constraints",
+        "start_char": 1019,
+        "end_char": 1040,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "HbA1c testing",
+      "snomed_concept": {
+        "cui": "199230006",
+        "snomed_code": "199230006",
+        "display": "Pre-existing type 2 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing type 2 diabetes mellitus",
+          "Pre-existing type 2 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7362890147794519,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "HbA1c testing",
+          "section": "unknown",
+          "char_start": 1058,
+          "char_end": 1071,
+          "reasoning": "Extracted by stanza_clinical NER as TEST"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "HbA1c testing",
+        "start_char": 1058,
+        "end_char": 1071,
+        "section": "unknown",
+        "entity_type": "lab_value",
+        "label": "TEST",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "medication adherence",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.6972957594074378,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "medication adherence",
+          "section": "unknown",
+          "char_start": 1136,
+          "char_end": 1156,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "medication adherence",
+        "start_char": 1136,
+        "end_char": 1156,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "patient assistance programs",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.732921686581163,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "patient assistance programs",
+          "section": "unknown",
+          "char_start": 1169,
+          "char_end": 1196,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "patient assistance programs",
+        "start_char": 1169,
+        "end_char": 1196,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "medication costs",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.715456891652966,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "medication costs",
+          "section": "unknown",
+          "char_start": 1201,
+          "char_end": 1217,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "medication costs",
+        "start_char": 1201,
+        "end_char": 1217,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "insulin access",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.7066734873527493,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "insulin access",
+          "section": "unknown",
+          "char_start": 1228,
+          "char_end": 1242,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "insulin access",
+        "start_char": 1228,
+        "end_char": 1242,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "199230006",
+        "snomed_code": "199230006",
+        "display": "Pre-existing type 2 diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Pre-existing type 2 diabetes mellitus",
+          "Pre-existing type 2 diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7460093196337335,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "unknown",
+          "char_start": 1442,
+          "char_end": 1454,
+          "reasoning": "Extracted by stanza_clinical NER as PROBLEM"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 1442,
+        "end_char": 1454,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "PROBLEM",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "current therapy",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7071222061097083,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "current therapy",
+          "section": "unknown",
+          "char_start": 1497,
+          "char_end": 1512,
+          "reasoning": "Extracted by stanza_clinical NER as TREATMENT"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "current therapy",
+        "start_char": 1497,
+        "end_char": 1512,
+        "section": "unknown",
+        "entity_type": "medication",
+        "label": "TREATMENT",
+        "source_model": "stanza_clinical",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "review_required_count": 18,
+  "processing_time_ms": 22745.132446289062,
+  "metadata": {
+    "total_entities": 34,
+    "mapped_codes": 18,
+    "skipped_entities": 16,
+    "confidence_threshold": 0.7
+  }
+}

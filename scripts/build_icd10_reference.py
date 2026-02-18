@@ -310,7 +310,7 @@ File typically named: icd10cm-codes-{date}.txt
     output_path = Path(args.output)
 
     if not input_path.exists():
-        print(f"✗ Input file not found: {input_path}")
+        print(f"Input file not found: {input_path}")
         print(f"\nExpected file: ICD-10-CM flat file (tab-delimited)")
         print(f"Typical name: icd10cm-codes-April-1-2026.txt")
         print(f"Format: code<tab>description (codes without dots)")
@@ -413,7 +413,7 @@ if __name__ == '__main__':
             print("\nAll tests passed")
             exit(0)
         else:
-            print("\n✗ Some tests failed")
+            print("\nSome tests failed")
             exit(1)
 
     exit(main())

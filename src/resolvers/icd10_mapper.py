@@ -266,7 +266,7 @@ def test_icd10_mapper():
     icd10_reference_path = Path("data/reference/icd10_diabetes_codes.json")
 
     if not crosswalk_path.exists() or not icd10_reference_path.exists():
-        print(f"✗ Required files not found")
+        print(f"Required files not found")
         print(f"  Crosswalk: {crosswalk_path}")
         print(f"  ICD-10 reference: {icd10_reference_path}")
         print("Run data preparation scripts first.")

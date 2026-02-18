@@ -516,7 +516,7 @@ Supports two input formats:
     output_path = Path(args.output)
 
     if not input_dir.exists():
-        print(f"✗ Input directory not found: {input_dir}")
+        print(f"Input directory not found: {input_dir}")
         return 1
 
     # Auto-detect format if needed
@@ -531,7 +531,7 @@ Supports two input formats:
             format_type = 'snomed'
             print(f"Auto-detected format: SNOMED CT US Edition")
         else:
-            print(f"✗ Could not auto-detect format")
+            print(f"Could not auto-detect format")
             print(f"\nLooking for either:")
             print(f"  UMLS: MRCONSO.RRF in {input_dir}")
             print(f"  SNOMED: sct2_Description_Snapshot*.txt in {input_dir}")
@@ -552,7 +552,7 @@ Supports two input formats:
         # Find Description file
         description_files = list(input_dir.glob("sct2_Description_Snapshot*.txt"))
         if not description_files:
-            print(f"✗ Description file not found: sct2_Description_Snapshot*.txt")
+            print(f"Description file not found: sct2_Description_Snapshot*.txt")
             return 1
         description_path = description_files[0]
 
@@ -594,7 +594,7 @@ Supports two input formats:
         mrsty_path = input_dir / "MRSTY.RRF"
 
         if not mrconso_path.exists():
-            print(f"✗ MRCONSO.RRF not found at {mrconso_path}")
+            print(f"MRCONSO.RRF not found at {mrconso_path}")
             print(f"\nExpected UMLS directory structure:")
             print(f"  {input_dir}/")
             print(f"    MRCONSO.RRF  (481 MB)")
@@ -622,7 +622,7 @@ Supports two input formats:
         if mrsty_path.exists():
             concepts = add_semantic_types(concepts, mrsty_path)
     else:
-        print(f"✗ Unknown format: {format_type}")
+        print(f"Unknown format: {format_type}")
         return 1
 
     # Convert to list

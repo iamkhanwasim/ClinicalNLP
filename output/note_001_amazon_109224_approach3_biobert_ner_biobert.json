@@ -1,0 +1,838 @@
+{
+  "note_id": "note_001_amazon_109224",
+  "approach": "approach_3",
+  "ner_model": "biobert_ner",
+  "embedding_model": "biobert",
+  "extractions": [
+    {
+      "condition": "presents",
+      "snomed_concept": {
+        "cui": "703138006",
+        "snomed_code": "703138006",
+        "display": "Type II diabetes mellitus in remission (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Type II diabetes mellitus in remission (disorder)",
+          "Type II diabetes mellitus in remission",
+          "Type 2 diabetes mellitus in remission"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.7203040471052164,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "presents",
+          "section": "unknown",
+          "char_start": 84,
+          "char_end": 92,
+          "reasoning": "Extracted by biobert_ner NER as Clinical_event"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "presents",
+        "start_char": 84,
+        "end_char": 92,
+        "section": "unknown",
+        "entity_type": "condition",
+        "label": "Clinical_event",
+        "source_model": "biobert_ner",
+        "confidence": 0.946617603302002
+      }
+    },
+    {
+      "condition": "insulin",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.7107148775648016,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "insulin",
+          "section": "unknown",
+          "char_start": 374,
+          "char_end": 381,
+          "reasoning": "Extracted by biobert_ner NER as Medication"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "insulin",
+        "start_char": 374,
+        "end_char": 381,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Medication",
+        "source_model": "biobert_ner",
+        "confidence": 0.9997186064720154
+      }
+    },
+    {
+      "condition": "##yp",
+      "snomed_concept": {
+        "cui": "19378003",
+        "snomed_code": "19378003",
+        "display": "Pseudotabes due to diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetic pseudotabes",
+          "Pseudotabes with diabetes mellitus",
+          "Pseudotabes due to diabetes mellitus (disorder)",
+          "Pseudotabes due to diabetes mellitus"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.49",
+        "display": "Type 2 diabetes mellitus with other diabetic neurological complication",
+        "billable": true,
+        "category": "E11",
+        "hcc": true
+      },
+      "confidence": 0.7366195692791797,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##yp",
+          "section": "unknown",
+          "char_start": 455,
+          "char_end": 457,
+          "reasoning": "Extracted by biobert_ner NER as Sign_symptom"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##yp",
+        "start_char": 455,
+        "end_char": 457,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Sign_symptom",
+        "source_model": "biobert_ner",
+        "confidence": 0.6482782959938049
+      }
+    },
+    {
+      "condition": "##lled",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7429547334547015,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##lled",
+          "section": "unknown",
+          "char_start": 656,
+          "char_end": 660,
+          "reasoning": "Extracted by biobert_ner NER as History"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##lled",
+        "start_char": 656,
+        "end_char": 660,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "History",
+        "source_model": "biobert_ner",
+        "confidence": 0.8623108863830566
+      }
+    },
+    {
+      "condition": "8 years ago",
+      "snomed_concept": {
+        "cui": "734022008",
+        "snomed_code": "734022008",
+        "display": "Wolfram-like syndrome (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Wolfram-like syndrome (disorder)",
+          "Wolfram-like syndrome"
+        ]
+      },
+      "icd10_code": {
+        "code": "E13.8",
+        "display": "Other specified diabetes mellitus with unspecified complications",
+        "billable": true,
+        "category": "E13",
+        "hcc": true
+      },
+      "confidence": 0.8547540101591667,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "8 years ago",
+          "section": "unknown",
+          "char_start": 673,
+          "char_end": 684,
+          "reasoning": "Extracted by biobert_ner NER as Date"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "8 years ago",
+        "start_char": 673,
+        "end_char": 684,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Date",
+        "source_model": "biobert_ner",
+        "confidence": 0.9150668978691101
+      }
+    },
+    {
+      "condition": "surgically corrected",
+      "snomed_concept": {
+        "cui": "405749004",
+        "snomed_code": "405749004",
+        "display": "Newly diagnosed diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Newly diagnosed diabetes",
+          "Newly diagnosed diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.637919046306039,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "surgically corrected",
+          "section": "unknown",
+          "char_start": 721,
+          "char_end": 741,
+          "reasoning": "Extracted by biobert_ner NER as Therapeutic_procedure"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "surgically corrected",
+        "start_char": 721,
+        "end_char": 741,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Therapeutic_procedure",
+        "source_model": "biobert_ner",
+        "confidence": 0.9233502745628357
+      }
+    },
+    {
+      "condition": "years",
+      "snomed_concept": {
+        "cui": "703138006",
+        "snomed_code": "703138006",
+        "display": "Type II diabetes mellitus in remission (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Type II diabetes mellitus in remission (disorder)",
+          "Type II diabetes mellitus in remission",
+          "Type 2 diabetes mellitus in remission"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.6942436774611676,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "years",
+          "section": "unknown",
+          "char_start": 744,
+          "char_end": 749,
+          "reasoning": "Extracted by biobert_ner NER as Duration"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "years",
+        "start_char": 744,
+        "end_char": 749,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Duration",
+        "source_model": "biobert_ner",
+        "confidence": 0.5848765969276428
+      }
+    },
+    {
+      "condition": "##tension",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7344498043218628,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##tension",
+          "section": "unknown",
+          "char_start": 761,
+          "char_end": 768,
+          "reasoning": "Extracted by biobert_ner NER as Sign_symptom"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##tension",
+        "start_char": 761,
+        "end_char": 768,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Sign_symptom",
+        "source_model": "biobert_ner",
+        "confidence": 0.9956541061401367
+      }
+    },
+    {
+      "condition": "poor",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.6942315627135301,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "poor",
+          "section": "unknown",
+          "char_start": 937,
+          "char_end": 941,
+          "reasoning": "Extracted by biobert_ner NER as Lab_value"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "poor",
+        "start_char": 937,
+        "end_char": 941,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Lab_value",
+        "source_model": "biobert_ner",
+        "confidence": 0.9807779788970947
+      }
+    },
+    {
+      "condition": "##oglyce",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7384100753033973,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##oglyce",
+          "section": "unknown",
+          "char_start": 995,
+          "char_end": 1001,
+          "reasoning": "Extracted by biobert_ner NER as Medication"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##oglyce",
+        "start_char": 995,
+        "end_char": 1001,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Medication",
+        "source_model": "biobert_ner",
+        "confidence": 0.9702679514884949
+      }
+    },
+    {
+      "condition": "glucose",
+      "snomed_concept": {
+        "cui": "735537007",
+        "snomed_code": "735537007",
+        "display": "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis (disorder)",
+          "Hyperosmolar hyperglycemic coma due to diabetes mellitus without ketoacidosis",
+          "Hyperosmolar hyperglycaemic coma due to diabetes mellitus without ketoacidosis"
+        ]
+      },
+      "icd10_code": {
+        "code": "E11.01",
+        "display": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+        "billable": true,
+        "category": "E11",
+        "hcc": false
+      },
+      "confidence": 0.8576513182539677,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "glucose",
+          "section": "unknown",
+          "char_start": 1090,
+          "char_end": 1097,
+          "reasoning": "Extracted by biobert_ner NER as Diagnostic_procedure"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "glucose",
+        "start_char": 1090,
+        "end_char": 1097,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Diagnostic_procedure",
+        "source_model": "biobert_ner",
+        "confidence": 0.9324552416801453
+      }
+    },
+    {
+      "condition": "insulin",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.7107148775648016,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "insulin",
+          "section": "unknown",
+          "char_start": 1228,
+          "char_end": 1235,
+          "reasoning": "Extracted by biobert_ner NER as Medication"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "insulin",
+        "start_char": 1228,
+        "end_char": 1235,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Medication",
+        "source_model": "biobert_ner",
+        "confidence": 0.9994779229164124
+      }
+    },
+    {
+      "condition": "2",
+      "snomed_concept": {
+        "cui": "1285518004",
+        "snomed_code": "1285518004",
+        "display": "Wolfram syndrome type 1 (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Wolfram syndrome type I",
+          "Wolfram syndrome type 1 (disorder)",
+          "Wolfram syndrome type 1",
+          "WFS1 - Wolfram syndrome-1"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.904805379483606,
+      "inference_strength": "explicit",
+      "needs_review": false,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "2",
+          "section": "unknown",
+          "char_start": 1316,
+          "char_end": 1317,
+          "reasoning": "Extracted by biobert_ner NER as Duration"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "2",
+        "start_char": 1316,
+        "end_char": 1317,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Duration",
+        "source_model": "biobert_ner",
+        "confidence": 0.7467229962348938
+      }
+    },
+    {
+      "condition": "counseling",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7164864200086507,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "counseling",
+          "section": "unknown",
+          "char_start": 1417,
+          "char_end": 1427,
+          "reasoning": "Extracted by biobert_ner NER as Therapeutic_procedure"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "counseling",
+        "start_char": 1417,
+        "end_char": 1427,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Therapeutic_procedure",
+        "source_model": "biobert_ner",
+        "confidence": 0.8444933295249939
+      }
+    },
+    {
+      "condition": "##tension",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7344498043218628,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##tension",
+          "section": "unknown",
+          "char_start": 1447,
+          "char_end": 1454,
+          "reasoning": "Extracted by biobert_ner NER as Sign_symptom"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##tension",
+        "start_char": 1447,
+        "end_char": 1454,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Sign_symptom",
+        "source_model": "biobert_ner",
+        "confidence": 0.9925525188446045
+      }
+    },
+    {
+      "condition": "stable",
+      "snomed_concept": {
+        "cui": "237622006",
+        "snomed_code": "237622006",
+        "display": "Poor glycemic control (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Poor glycaemic control",
+          "Poor glycemic control",
+          "Poor glycemic control (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7241674392748129,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "stable",
+          "section": "unknown",
+          "char_start": 1466,
+          "char_end": 1472,
+          "reasoning": "Extracted by biobert_ner NER as Lab_value"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "stable",
+        "start_char": 1466,
+        "end_char": 1472,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Lab_value",
+        "source_model": "biobert_ner",
+        "confidence": 0.9973118305206299
+      }
+    },
+    {
+      "condition": "##sin",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7383081938131472,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##sin",
+          "section": "unknown",
+          "char_start": 1478,
+          "char_end": 1481,
+          "reasoning": "Extracted by biobert_ner NER as Medication"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##sin",
+        "start_char": 1478,
+        "end_char": 1481,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Medication",
+        "source_model": "biobert_ner",
+        "confidence": 0.9775677919387817
+      }
+    },
+    {
+      "condition": "##op",
+      "snomed_concept": {
+        "cui": "398123003",
+        "snomed_code": "398123003",
+        "display": "Dawn phenomenon (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Dawn phenomenon (disorder)",
+          "Dawn phenomenon",
+          "Rebound hyperglycaemia",
+          "Rebound hyperglycemia",
+          "Rebound phenomenon"
+        ]
+      },
+      "icd10_code": {
+        "code": "R73.9",
+        "display": "Hyperglycemia, unspecified",
+        "billable": true,
+        "category": "R73",
+        "hcc": false
+      },
+      "confidence": 0.7427454216259266,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "##op",
+          "section": "unknown",
+          "char_start": 1481,
+          "char_end": 1483,
+          "reasoning": "Extracted by biobert_ner NER as Medication"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "##op",
+        "start_char": 1481,
+        "end_char": 1483,
+        "section": "unknown",
+        "entity_type": "other",
+        "label": "Medication",
+        "source_model": "biobert_ner",
+        "confidence": 0.997520387172699
+      }
+    }
+  ],
+  "review_required_count": 17,
+  "processing_time_ms": 3893.2459354400635,
+  "metadata": {
+    "total_entities": 45,
+    "mapped_codes": 18,
+    "skipped_entities": 27,
+    "confidence_threshold": 0.7
+  }
+}
