@@ -19,7 +19,15 @@ class ICD10Mapper:
     - Direct ICD-10 codes (from DirectICD10Resolver)
     - SNOMED CT crosswalk mapping (when available)
     - Code validation and enrichment with metadata
+    - Prevalence-based ranking for ambiguous diabetes concepts
     """
+
+    # SNOMED concepts where Type 2 diabetes should be preferred over Type 1 as default
+    # Type 2 accounts for 90-95% of diabetes cases
+    AMBIGUOUS_DM_CONCEPTS = {
+        '73211009',   # Diabetes mellitus (general)
+        '111552007',  # Diabetes mellitus without complication
+    }
 
     def __init__(
         self,
@@ -145,7 +153,7 @@ class ICD10Mapper:
             snomed_code: SNOMED CT concept ID
 
         Returns:
-            List of mapped ICD-10 codes (sorted by map priority)
+            List of mapped ICD-10 codes (ranked by priority and prevalence)
         """
         if not self.crosswalk:
             raise RuntimeError(
@@ -158,16 +166,78 @@ class ICD10Mapper:
         if not mappings:
             return []
 
-        # Sort by map priority (lower is higher priority)
-        mappings = sorted(mappings, key=lambda x: x['map_priority'])
+        # Rank candidates using improved logic
+        ranked_mappings = self._rank_candidates(mappings, snomed_code)
 
         # Convert to ICDCode objects
         icd_codes = []
-        for mapping in mappings:
+        for mapping in ranked_mappings:
             icd_code = self._validate_code(mapping['icd10_code'])
             icd_codes.append(icd_code)
 
         return icd_codes
+
+    def _rank_candidates(self, candidates: List[Dict], source_concept_id: str) -> List[Dict]:
+        """
+        Rank ICD-10 candidates for a SNOMED concept.
+
+        Ranking priority:
+        1. mapGroup and mapPriority from ExtendedMap (lower is better)
+        2. For ambiguous diabetes concepts, prefer Type 2 (E11.x) over Type 1 (E10.x)
+        3. Prefer billable codes over non-billable
+
+        Args:
+            candidates: List of crosswalk mapping dictionaries
+            source_concept_id: SNOMED concept ID being mapped
+
+        Returns:
+            Ranked list of mapping dictionaries
+        """
+        # Create a mutable copy of candidates
+        ranked = list(candidates)
+
+        # 1. Respect mapGroup and mapPriority from ExtendedMap
+        # Lower mapGroup first, then lower mapPriority within group
+        ranked.sort(key=lambda c: (c.get('map_group', 1), c.get('map_priority', 1)))
+
+        # 2. For ambiguous diabetes mappings, prefer Type 2 (E11.x) over Type 1 (E10.x)
+        # Type 2 accounts for 90-95% of diabetes cases (prevalence-based heuristic)
+        # The code will still carry needs_review = true in the pipeline
+        if source_concept_id in self.AMBIGUOUS_DM_CONCEPTS:
+            ranked.sort(key=lambda c: self._dm_type_preference(c.get('icd10_code', '')))
+
+        # 3. Prefer billable codes over non-billable (stable sort to preserve previous ordering)
+        ranked.sort(
+            key=lambda c: (0 if self.code_by_id.get(c.get('icd10_code', ''), {}).get('billable', False) else 1)
+        )
+
+        return ranked
+
+    @staticmethod
+    def _dm_type_preference(code: str) -> int:
+        """
+        Rank diabetes type codes by prevalence.
+
+        Type 2 (E11) is preferred over Type 1 (E10) because it accounts for
+        90-95% of diabetes cases. This is a prevalence-based heuristic,
+        NOT a clinical determination.
+
+        Args:
+            code: ICD-10 code
+
+        Returns:
+            Ranking integer (lower is better)
+        """
+        if code.startswith('E11'):
+            return 0  # Type 2 preferred
+        elif code.startswith('E13'):
+            return 1  # Other specified
+        elif code.startswith('E10'):
+            return 2  # Type 1
+        elif code.startswith('E08') or code.startswith('E09'):
+            return 3  # Due to underlying condition / drug-induced
+        else:
+            return 4  # Other
 
     def _is_hcc_code(self, code: str) -> bool:
         """

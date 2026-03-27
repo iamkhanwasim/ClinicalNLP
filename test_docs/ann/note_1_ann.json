@@ -1,0 +1,238 @@
+{
+  "doc_id": "note_01",
+  "spans": [
+    {
+      "id": "span_o3gqgldm",
+      "start": 27,
+      "end": 44,
+      "text": "diabetes mellitus",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_ytoifpxg",
+      "start": 46,
+      "end": 52,
+      "text": "type 1",
+      "source": "human",
+      "entity_type": "Diabetes_type"
+    },
+    {
+      "id": "span_mdoh0qji",
+      "start": 114,
+      "end": 133,
+      "text": "diabetic neuropathy",
+      "source": "human",
+      "entity_type": "Neurologic_finding"
+    },
+    {
+      "id": "span_yfs52lm8",
+      "start": 3276,
+      "end": 3293,
+      "text": "Diabetes mellitus",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_xs2i3vrs",
+      "start": 198,
+      "end": 201,
+      "text": "NPH",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_1v53vut5",
+      "start": 206,
+      "end": 221,
+      "text": "Regular insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_t4x7m7zb",
+      "start": 1013,
+      "end": 1019,
+      "text": "Lantus",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_8vo3nv84",
+      "start": 1112,
+      "end": 1118,
+      "text": "Lantus",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_1603zkhx",
+      "start": 1444,
+      "end": 1468,
+      "text": "history of gastroparesis",
+      "source": "human",
+      "entity_type": "Digestive_finding"
+    },
+    {
+      "id": "span_pfg8pu0t",
+      "start": 3295,
+      "end": 3301,
+      "text": "type 1",
+      "source": "human",
+      "entity_type": "Diabetes_type"
+    },
+    {
+      "id": "span_bivarkii",
+      "start": 3303,
+      "end": 3320,
+      "text": "poorly controlled",
+      "source": "human",
+      "entity_type": "Diabetes_control_status"
+    },
+    {
+      "id": "span_ww4e12bm",
+      "start": 3337,
+      "end": 3356,
+      "text": "diabetic neuropathy",
+      "source": "human",
+      "entity_type": "Neurologic_finding"
+    },
+    {
+      "id": "span_90rllnrh",
+      "start": 3362,
+      "end": 3387,
+      "text": "positive microalbuminuria",
+      "source": "human",
+      "entity_type": "Renal_finding"
+    },
+    {
+      "id": "span_w230quvz",
+      "start": 3518,
+      "end": 3535,
+      "text": "Diabetes mellitus",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_eglften3",
+      "start": 3536,
+      "end": 3542,
+      "text": "type 1",
+      "source": "human",
+      "entity_type": "Diabetes_type"
+    },
+    {
+      "id": "span_otfank2u",
+      "start": 3768,
+      "end": 3774,
+      "text": "Lantus",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    }
+  ],
+  "reasoning_steps": [],
+  "document_annotations": [
+    {
+      "id": "ann_rr9srm4s",
+      "concept": {
+        "code": "E1065",
+        "display": "Type 1 diabetes mellitus with hyperglycemia",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_o3gqgldm",
+        "span_yfs52lm8",
+        "span_w230quvz",
+        "span_ytoifpxg",
+        "span_pfg8pu0t",
+        "span_eglften3",
+        "span_bivarkii"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_2u71zk5h",
+      "concept": {
+        "code": "E1029",
+        "display": "Type 1 diabetes mellitus with other diabetic kidney complication",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_o3gqgldm",
+        "span_yfs52lm8",
+        "span_w230quvz",
+        "span_ytoifpxg",
+        "span_pfg8pu0t",
+        "span_eglften3",
+        "span_90rllnrh"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_57aec30z",
+      "concept": {
+        "code": "R808",
+        "display": "Other proteinuria",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_90rllnrh"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_dw4i2b6p",
+      "concept": {
+        "code": "Z8639",
+        "display": "Personal history of other endocrine, nutritional and metabolic disease",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_o3gqgldm",
+        "span_yfs52lm8",
+        "span_w230quvz",
+        "span_1603zkhx",
+        "span_ytoifpxg",
+        "span_pfg8pu0t",
+        "span_eglften3"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_3eevooj8",
+      "concept": {
+        "code": "E1040",
+        "display": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_o3gqgldm",
+        "span_yfs52lm8",
+        "span_w230quvz",
+        "span_ytoifpxg",
+        "span_pfg8pu0t",
+        "span_eglften3",
+        "span_mdoh0qji",
+        "span_ww4e12bm"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    }
+  ],
+  "completed": true,
+  "version": 80
+}

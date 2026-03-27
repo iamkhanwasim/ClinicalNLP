@@ -78,6 +78,47 @@ SEED_CONCEPTS = {
     '386964003',  # Glucophage (brand name)
 }
 
+# Co-occurring concepts commonly found in diabetes clinical notes
+# These are NOT diabetes concepts but often appear alongside diabetes
+# Extract these with one level of is_a hierarchy
+CO_OCCURRING_ROOTS = {
+    # Hypertension
+    '38341003',   # Hypertensive disorder
+    '59621000',   # Essential hypertension
+
+    # Eye conditions
+    '193570009',  # Cataract
+    # Note: Diabetic retinopathy (4855003) is already in SEED_CONCEPTS
+
+    # Symptoms commonly extracted by NER
+    '17173007',   # Polydipsia
+    '249501002',  # Polyphagia
+    '28442001',   # Polyuria
+    '44077006',   # Numbness
+    '91019004',   # Paresthesia
+
+    # Kidney
+    '709044004',  # Chronic kidney disease
+    '46177005',   # End-stage renal disease
+    '70536003',   # Transplant of kidney
+
+    # Obesity (common comorbidity)
+    '414916001',  # Obesity
+
+    # Neuropathy
+    '386033004',  # Neuropathy
+    '42658009',   # Peripheral neuropathy
+    # Note: Diabetic neuropathy (230572002) is already in SEED_CONCEPTS
+
+    # Medications as concepts (for medication entity resolution)
+    '109083003',  # Metformin (different SNOMED code)
+    '372567009',  # Glucophage (trade name - different code)
+
+    # Lab values as concepts
+    '33747003',   # Blood glucose
+    '43396009',   # Hemoglobin A1c
+}
+
 # UMLS CUI equivalents (for UMLS format compatibility)
 UMLS_ROOT_CUIS = {
     'C0011847',   # Diabetes Mellitus
@@ -566,7 +607,7 @@ Supports two input formats:
         else:
             print(f"Relationship file not found (hierarchy expansion disabled)\n")
 
-        # Step 1: Expand concept set using hierarchy (if enabled)
+        # Step 1: Expand diabetes concept set using hierarchy (if enabled)
         all_diabetes_concepts = ROOT_DIABETES_CONCEPTS | SEED_CONCEPTS
 
         if not args.no_hierarchy and relationship_path:
@@ -581,6 +622,26 @@ Supports two input formats:
             else:
                 print(f"\nSkipping hierarchy expansion (Relationship file not found)")
             print(f"Using {len(all_diabetes_concepts)} seed concepts only")
+
+        # Step 1b: Add co-occurring concepts (one level of hierarchy only)
+        print(f"\nAdding co-occurring concepts (commonly found in diabetes notes)...")
+        print(f"Co-occurring root concepts: {len(CO_OCCURRING_ROOTS)}")
+
+        if not args.no_hierarchy and relationship_path:
+            # Extract co-occurring concepts with only 1 level of is_a hierarchy
+            co_occurring_concepts = parse_snomed_relationship_file(
+                relationship_path,
+                CO_OCCURRING_ROOTS,
+                max_depth=1  # Only one level for co-occurring concepts
+            )
+            print(f"  Co-occurring concepts with 1-level hierarchy: {len(co_occurring_concepts)}")
+            all_diabetes_concepts = all_diabetes_concepts | co_occurring_concepts
+        else:
+            # No hierarchy expansion, just add the roots
+            all_diabetes_concepts = all_diabetes_concepts | CO_OCCURRING_ROOTS
+            print(f"  Added {len(CO_OCCURRING_ROOTS)} co-occurring root concepts only")
+
+        print(f"\nTotal concepts to extract: {len(all_diabetes_concepts)}")
 
         # Step 2: Extract concepts from Description file
         concepts = parse_snomed_description_file(description_path, all_diabetes_concepts)
@@ -650,13 +711,16 @@ Supports two input formats:
     # Prepare metadata based on format
     if format_type == 'snomed':
         metadata = {
-            'description': 'SNOMED CT diabetes concepts extracted from SNOMED CT US Edition',
+            'description': 'SNOMED CT diabetes concepts + co-occurring concepts extracted from SNOMED CT US Edition',
             'source': 'SNOMEDCT_US',
             'format': 'native',
             'root_concepts': list(ROOT_DIABETES_CONCEPTS),
+            'seed_concepts': list(SEED_CONCEPTS),
+            'co_occurring_roots': list(CO_OCCURRING_ROOTS),
             'total_concepts': len(concepts_list),
             'extraction_method': 'hierarchy' if not args.no_hierarchy else 'seeds_only',
-            'max_depth': args.max_depth if not args.no_hierarchy else None
+            'max_depth': args.max_depth if not args.no_hierarchy else None,
+            'co_occurring_max_depth': 1 if not args.no_hierarchy else None
         }
     else:  # umls
         metadata = {

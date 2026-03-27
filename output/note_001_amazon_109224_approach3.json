@@ -1,0 +1,162 @@
+{
+  "note_id": "note_001_amazon_109224",
+  "approach": "approach_3",
+  "ner_model": "scispacy",
+  "embedding_model": "sapbert",
+  "extractions": [
+    {
+      "condition": "diabetes",
+      "snomed_concept": {
+        "cui": "127012008",
+        "snomed_code": "127012008",
+        "display": "Lipoatrophic diabetes (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Lipoatrophic diabetes",
+          "Lipodystrophic diabetes",
+          "Lipoatrophic diabetes (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E08.69",
+        "display": "Diabetes mellitus due to underlying condition with other specified complication",
+        "billable": true,
+        "category": "E08",
+        "hcc": false
+      },
+      "confidence": 0.759188458285595,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "diabetes",
+          "section": "Clinical Note: Patient Visit 109224_HPI (History of Present Illness)",
+          "char_start": 97,
+          "char_end": 105,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "diabetes",
+        "start_char": 97,
+        "end_char": 105,
+        "section": "Clinical Note: Patient Visit 109224_HPI (History of Present Illness)",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "snomed_concept": {
+        "cui": "73211009",
+        "snomed_code": "73211009",
+        "display": "Diabetes mellitus (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "Diabetes mellitus",
+          "DM - Diabetes mellitus",
+          "Diabetes mellitus (disorder)"
+        ]
+      },
+      "icd10_code": {
+        "code": "E10.9",
+        "display": "Type 1 diabetes mellitus without complications",
+        "billable": true,
+        "category": "E10",
+        "hcc": true
+      },
+      "confidence": 0.7200000000000001,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Diabetes mellitus",
+          "section": "Clinical Note: Patient Visit 109224_Past_History_Medical",
+          "char_start": 629,
+          "char_end": 646,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Diabetes mellitus",
+        "start_char": 629,
+        "end_char": 646,
+        "section": "Clinical Note: Patient Visit 109224_Past_History_Medical",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    },
+    {
+      "condition": "Hypertension",
+      "snomed_concept": {
+        "cui": "38341003",
+        "snomed_code": "38341003",
+        "display": "Hypertensive disorder, systemic arterial (disorder)",
+        "semantic_types": [],
+        "synonyms": [
+          "High blood pressure",
+          "Hypertensive vascular disease",
+          "Hypertensive vascular degeneration",
+          "Hypertension",
+          "BP - High blood pressure",
+          "Systemic arterial hypertension",
+          "HBP - High blood pressure",
+          "HT - Hypertension",
+          "High blood pressure disorder",
+          "BP+ - Hypertension",
+          "Hypertensive disorder, systemic arterial (disorder)",
+          "Hypertensive disorder",
+          "HTN - Hypertension",
+          "Hypertensive disorder, systemic arterial"
+        ]
+      },
+      "icd10_code": {
+        "code": "I10",
+        "display": "Essential (primary) hypertension",
+        "billable": false,
+        "category": "I10",
+        "hcc": false
+      },
+      "confidence": 0.8,
+      "inference_strength": "strong_suggestion",
+      "needs_review": true,
+      "review_reason": "",
+      "evidence_spans": [
+        {
+          "text": "Hypertension",
+          "section": "Clinical Note: Patient Visit 109224_Past_History_Medical",
+          "char_start": 756,
+          "char_end": 768,
+          "reasoning": "Extracted by scispacy NER as DISEASE"
+        }
+      ],
+      "enrichment_reasoning": "",
+      "source_entity": {
+        "text": "Hypertension",
+        "start_char": 756,
+        "end_char": 768,
+        "section": "Clinical Note: Patient Visit 109224_Past_History_Medical",
+        "entity_type": "condition",
+        "label": "DISEASE",
+        "source_model": "scispacy",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "review_required_count": 3,
+  "processing_time_ms": 19913.99312019348,
+  "metadata": {
+    "total_entities": 14,
+    "mapped_codes": 3,
+    "skipped_entities": 7,
+    "confidence_threshold": 0.7
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "doc_id": "note_13_Amazon_108411",
+  "spans": [
+    {
+      "id": "span_4zaddji9",
+      "start": 34,
+      "end": 42,
+      "text": "diabetes",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_165ledkj",
+      "start": 136,
+      "end": 144,
+      "text": "diabetes",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_jodgby99",
+      "start": 1903,
+      "end": 1920,
+      "text": "diabetes mellitus",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_c06tkuwq",
+      "start": 1896,
+      "end": 1902,
+      "text": "Type 2",
+      "source": "human",
+      "entity_type": "Diabetes_type"
+    },
+    {
+      "id": "span_u2jmdtnk",
+      "start": 1935,
+      "end": 1942,
+      "text": "Farxiga",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_dbo65rhs",
+      "start": 1944,
+      "end": 1955,
+      "text": "glimepiride",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_2wvgvrlf",
+      "start": 1961,
+      "end": 1970,
+      "text": "metformin",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_7uazjv4m",
+      "start": 2484,
+      "end": 2491,
+      "text": "Farxiga",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_jog18gx7",
+      "start": 2494,
+      "end": 2505,
+      "text": "Glimepiride",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_6oj23hd4",
+      "start": 3015,
+      "end": 3032,
+      "text": "Diabetes mellitus",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_zblne54u",
+      "start": 3034,
+      "end": 3046,
+      "text": "uncontrolled",
+      "source": "human",
+      "entity_type": "Diabetes_control_status"
+    },
+    {
+      "id": "span_69mq4xom",
+      "start": 3058,
+      "end": 3065,
+      "text": "Farxiga",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_mhtt8c43",
+      "start": 3067,
+      "end": 3078,
+      "text": "glimepiride",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_0anlz1wz",
+      "start": 3120,
+      "end": 3131,
+      "text": "glimepiride",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_4n42k7zf",
+      "start": 3228,
+      "end": 3241,
+      "text": "hyperglycemia",
+      "source": "human",
+      "entity_type": "Gycemic_status"
+    },
+    {
+      "id": "span_83jcmzed",
+      "start": 3254,
+      "end": 3266,
+      "text": "hypoglycemia",
+      "source": "human",
+      "entity_type": "Gycemic_status"
+    },
+    {
+      "id": "span_73rentmv",
+      "start": 237,
+      "end": 244,
+      "text": "Farxiga",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_uxakmu2q",
+      "start": 551,
+      "end": 562,
+      "text": "glimepiride",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_yloup4pk",
+      "start": 579,
+      "end": 588,
+      "text": "metformin",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_d9v8m8rk",
+      "start": 2521,
+      "end": 2530,
+      "text": "Metformin",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    },
+    {
+      "id": "span_by93hxaw",
+      "start": 3084,
+      "end": 3093,
+      "text": "metformin",
+      "source": "human",
+      "entity_type": "Oral_hypoglycemic_use"
+    }
+  ],
+  "reasoning_steps": [],
+  "document_annotations": [
+    {
+      "id": "ann_olj8q803",
+      "concept": {
+        "code": "Z7984",
+        "display": "Long term (current) use of oral hypoglycemic drugs",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_u2jmdtnk",
+        "span_7uazjv4m",
+        "span_69mq4xom",
+        "span_dbo65rhs",
+        "span_jog18gx7",
+        "span_mhtt8c43",
+        "span_0anlz1wz",
+        "span_2wvgvrlf",
+        "span_73rentmv",
+        "span_uxakmu2q",
+        "span_yloup4pk",
+        "span_d9v8m8rk",
+        "span_by93hxaw"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_5k90vzxm",
+      "concept": {
+        "code": "E1165",
+        "display": "Type 2 diabetes mellitus with hyperglycemia",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_4zaddji9",
+        "span_165ledkj",
+        "span_jodgby99",
+        "span_6oj23hd4",
+        "span_c06tkuwq",
+        "span_4n42k7zf"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_ako0b6sz",
+      "concept": {
+        "code": "E11649",
+        "display": "Type 2 diabetes mellitus with hypoglycemia without coma",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_4zaddji9",
+        "span_165ledkj",
+        "span_jodgby99",
+        "span_6oj23hd4",
+        "span_c06tkuwq",
+        "span_83jcmzed"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    }
+  ],
+  "completed": true,
+  "version": 1
+}

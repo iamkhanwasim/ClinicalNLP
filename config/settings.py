@@ -39,10 +39,27 @@ DIABETES_KG_PATH = os.getenv(
     str(REFERENCE_DATA_DIR / "diabetes_knowledge_graph.json")
 )
 
-# NER Model Configuration
+# NER Model Configuration (Legacy - for backward compatibility)
 NER_MODEL = os.getenv("NER_MODEL", "en_ner_bc5cdr_md")
 NER_MODEL_SECONDARY = os.getenv("NER_MODEL_SECONDARY", "en_core_med7_trf")
 USE_SECONDARY_NER = os.getenv("USE_SECONDARY_NER", "false").lower() == "true"
+
+# Phase 2B: Default models for Approach 3 pipeline (NEW ARCHITECTURE)
+# Default NER: ScispaCy (clean extraction, low garbage)
+# Benchmark alternative: Stanza
+DEFAULT_NER_MODEL = os.getenv("DEFAULT_NER_MODEL", "scispacy")
+DEFAULT_NER_BENCHMARK = os.getenv("DEFAULT_NER_BENCHMARK", "stanza_clinical")
+
+# Default Embedding: SapBERT (best for medical concept normalization, fewest SNOMED mismatches)
+# Benchmark alternatives: BioBERT, PubMedBERT
+DEFAULT_EMBEDDING_MODEL = os.getenv("DEFAULT_EMBEDDING_MODEL", "sapbert")
+DEFAULT_EMBEDDING_BENCHMARK = os.getenv("DEFAULT_EMBEDDING_BENCHMARK", "biobert")
+
+# Embedding directory
+SNOMED_EMBEDDINGS_DIR = os.getenv(
+    "SNOMED_EMBEDDINGS_DIR",
+    str(REFERENCE_DATA_DIR / "snomed_embeddings")
+)
 
 # Resolution Mode
 ResolutionMode = Literal["direct_icd10", "snomed"]

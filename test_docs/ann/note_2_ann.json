@@ -1,0 +1,89 @@
+{
+  "doc_id": "note_02",
+  "spans": [
+    {
+      "id": "span_4dhsl5qv",
+      "start": 145,
+      "end": 162,
+      "text": "poorly controlled",
+      "source": "human",
+      "entity_type": "Gycemic_status"
+    },
+    {
+      "id": "span_zlmt90zv",
+      "start": 104,
+      "end": 139,
+      "text": "osteomyelitis of the left great Toe",
+      "source": "human",
+      "entity_type": "Infectious_finding"
+    },
+    {
+      "id": "span_4vsv0z8x",
+      "start": 163,
+      "end": 171,
+      "text": "diabetes",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_fsoevmq4",
+      "start": 851,
+      "end": 859,
+      "text": "diabetes",
+      "source": "human",
+      "entity_type": "Diabetes"
+    }
+  ],
+  "reasoning_steps": [],
+  "document_annotations": [
+    {
+      "id": "ann_ppcphwkn",
+      "concept": {
+        "code": "E1165",
+        "display": "Type 2 diabetes mellitus with hyperglycemia",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_4dhsl5qv",
+        "span_4vsv0z8x"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_t9r662uu",
+      "concept": {
+        "code": "E1169",
+        "display": "Type 2 diabetes mellitus with other specified complication",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_zlmt90zv",
+        "span_4vsv0z8x"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_4qyvs1x5",
+      "concept": {
+        "code": "M869",
+        "display": "Osteomyelitis, unspecified",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_zlmt90zv"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    }
+  ],
+  "completed": false,
+  "version": 14
+}

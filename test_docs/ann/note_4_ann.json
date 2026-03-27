@@ -1,0 +1,137 @@
+{
+  "doc_id": "note_04",
+  "spans": [
+    {
+      "id": "span_c2mh9fho",
+      "start": 159,
+      "end": 167,
+      "text": "insulins",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_c7e3eyh4",
+      "start": 179,
+      "end": 193,
+      "text": "Lantus insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_bl2z3d00",
+      "start": 258,
+      "end": 273,
+      "text": "Humalog insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_8oxho8l5",
+      "start": 325,
+      "end": 332,
+      "text": "insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_cjld86ya",
+      "start": 483,
+      "end": 497,
+      "text": "Lantus insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_vz818chz",
+      "start": 999,
+      "end": 1007,
+      "text": "Diabetes",
+      "source": "human",
+      "entity_type": "Diabetes"
+    },
+    {
+      "id": "span_nalrqg69",
+      "start": 1137,
+      "end": 1151,
+      "text": "Lantus insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_weo4krfj",
+      "start": 1309,
+      "end": 1338,
+      "text": "Humalog sliding scale insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_s572f9ks",
+      "start": 373,
+      "end": 391,
+      "text": "low blood glucoses",
+      "source": "human",
+      "entity_type": "Gycemic_status"
+    },
+    {
+      "id": "span_lexgl1od",
+      "start": 667,
+      "end": 674,
+      "text": "insulin",
+      "source": "human",
+      "entity_type": "Insulin_use"
+    },
+    {
+      "id": "span_engl0u6s",
+      "start": 1037,
+      "end": 1055,
+      "text": "low blood glucoses",
+      "source": "human",
+      "entity_type": "Gycemic_status"
+    }
+  ],
+  "reasoning_steps": [],
+  "document_annotations": [
+    {
+      "id": "ann_jdvkdlx7",
+      "concept": {
+        "code": "E11649",
+        "display": "Type 2 diabetes mellitus with hypoglycemia without coma",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_vz818chz",
+        "span_s572f9ks",
+        "span_engl0u6s"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    },
+    {
+      "id": "ann_h1ib9jrs",
+      "concept": {
+        "code": "Z794",
+        "display": "Long term (current) use of insulin",
+        "system": "ICD-10-CM"
+      },
+      "evidence_span_ids": [
+        "span_c2mh9fho",
+        "span_c7e3eyh4",
+        "span_cjld86ya",
+        "span_nalrqg69",
+        "span_bl2z3d00",
+        "span_8oxho8l5",
+        "span_lexgl1od",
+        "span_weo4krfj"
+      ],
+      "reasoning_step_ids": [],
+      "note": "",
+      "source": "human",
+      "category": null
+    }
+  ],
+  "completed": true,
+  "version": 23
+}

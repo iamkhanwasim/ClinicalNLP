@@ -65,17 +65,18 @@ class NoteParser:
             note_id: Identifier for this note
 
         Returns:
-            ClinicalNote object with parsed sections
+            ClinicalNote object with parsed sections and section_offsets
         """
-        sections = self._extract_sections(raw_text)
+        sections, section_offsets = self._extract_sections(raw_text)
 
         return ClinicalNote(
             note_id=note_id,
             raw_text=raw_text,
-            sections=sections
+            sections=sections,
+            section_offsets=section_offsets
         )
 
-    def _extract_sections(self, text: str) -> Dict[str, str]:
+    def _extract_sections(self, text: str) -> Tuple[Dict[str, str], Dict[str, int]]:
         """
         Extract sections from text based on markdown headers.
 
@@ -86,9 +87,12 @@ class NoteParser:
             text: Full clinical note text
 
         Returns:
-            Dictionary mapping section names to section content
+            Tuple of (sections dictionary, section_offsets dictionary)
+            - sections: mapping section names to section content
+            - section_offsets: mapping section names to character offset in raw text
         """
         sections = {}
+        section_offsets = {}
 
         # Find all headers with their positions
         headers = list(self.header_pattern.finditer(text))
@@ -96,7 +100,8 @@ class NoteParser:
         if not headers:
             # No headers found - treat entire text as a single section
             sections["full_text"] = text.strip()
-            return sections
+            section_offsets["full_text"] = 0
+            return sections, section_offsets
 
         # Track the current parent section for subsections
         current_parent = None
@@ -119,16 +124,19 @@ class NoteParser:
                 # Level 1 header - new main section
                 current_parent = section_name
                 sections[section_name] = section_content
+                section_offsets[section_name] = start_pos
             elif level == 2 and current_parent:
                 # Level 2 header - subsection of current parent
                 # Use hierarchical key: Parent_Subsection
                 hierarchical_key = f"{current_parent}_{section_name}"
                 sections[hierarchical_key] = section_content
+                section_offsets[hierarchical_key] = start_pos
             else:
                 # Fallback for edge cases
                 sections[section_name] = section_content
+                section_offsets[section_name] = start_pos
 
-        return sections
+        return sections, section_offsets
 
     def get_section_offsets(self, note: ClinicalNote) -> Dict[str, Tuple[int, int]]:
         """
@@ -161,6 +169,9 @@ class NoteParser:
         """
         Determine which section contains a given character offset.
 
+        Uses the stored section_offsets from the parsed note to efficiently
+        determine which section contains a specific character position.
+
         Args:
             note: Parsed ClinicalNote object
             char_offset: Character position in the raw text
@@ -168,9 +179,24 @@ class NoteParser:
         Returns:
             Section name containing the offset, or None if not found
         """
-        offsets = self.get_section_offsets(note)
+        # Build a list of (section_name, start_offset, end_offset) tuples
+        section_ranges = []
+        raw_text = note.raw_text
 
-        for section_name, (start, end) in offsets.items():
+        # Get sorted sections by offset
+        sorted_sections = sorted(note.section_offsets.items(), key=lambda x: x[1])
+
+        for i, (section_name, start_offset) in enumerate(sorted_sections):
+            # Determine end offset (start of next section or end of text)
+            if i + 1 < len(sorted_sections):
+                end_offset = sorted_sections[i + 1][1]
+            else:
+                end_offset = len(raw_text)
+
+            section_ranges.append((section_name, start_offset, end_offset))
+
+        # Find which section contains the offset
+        for section_name, start, end in section_ranges:
             if start <= char_offset < end:
                 return section_name
 
