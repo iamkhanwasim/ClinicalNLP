@@ -38,9 +38,9 @@ MANIFEST
 .DS_Store
 
 # Jupyter Notebook
-*.ipynb
-.ipynb_checkpoints
-*.ipynb_checkpoints
+# *.ipynb
+# .ipynb_checkpoints
+# *.ipynb_checkpoints
 
 # Testing
 .pytest_cache/
